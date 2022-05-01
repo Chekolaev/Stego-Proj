@@ -1,3 +1,8 @@
+html {
+    /* Растягиваем документ на всю высоту окна */
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,8 +10,74 @@ body {
     justify-content: flex-start;
     align-items: center;
     align-content: stretch;
+    margin: 0;
+    background-color: rgb(57, 62, 63);
+    /* min-height: 500vh; */
+}
+
+header,
+footer {
+    color: rgb(255, 198, 198);
+    text-align: center;
 }
 
 header {
-    background: url() no-repeat center bottom;
+    width: 100%;
+    background: url(https://raw.githubusercontent.com/Chekolaev/Stego-Proj/main/Web/Img/header-back.jpeg) no-repeat center;
+    background-size: 100%;
+    text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}
+
+nav {
+    margin-top: 1em;
+    padding-bottom: 0.5em;
+    width: 100%;
+    font-size: 16pt;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: stretch;
+    padding-top: 0.6em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    border-bottom: 3px solid gray;
+}
+
+.main {
+    /* Чтобы занимал оставшееся пространство */
+    flex-grow: 1;
+    background: red;
+}
+
+footer {
+    border-top: 3px solid gray;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+    /* Позиционируем footer внизу main */
+    position: static;
+    bottom: 40px;
+    width: 100%;
+    /* Высота footer по умолчанию */
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.navdiv {
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.navref {
+    font-size: 24pt;
+    color: #000;
+    text-decoration: none;
 }
